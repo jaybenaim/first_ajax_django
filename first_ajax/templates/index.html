@@ -1,12 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
-    {% load static %}
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
+  <button class="ajax-btn">Run AJAX Request to Root</button> 
+  <button class="ping">Run AJAX Request to Ping/Pong</button> 
+  <button class="count">Run AJAX Request to Count</button> 
+  <button class="time">Run AJAX Request to Time</button> 
+  <button class="car">Run AJAX Request to A Car</button> 
+
+  <section class="root"> </section> 
+  <section class="ping-section"> </section> 
+  <section class="count-section"> </section> 
+  <section class="time-section"> </section> 
+  <section class="car-section">
+  <ul id="car-list"></ul> 
+  </section> 
+  
   </body>
 </html>
