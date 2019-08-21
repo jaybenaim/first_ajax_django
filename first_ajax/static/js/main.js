@@ -19,17 +19,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const carList = $('#car-list')
 
     button.click(() => { 
-    
-    //  const homeRequest = axios.get('https://bitmaker-monsters-api.herokuapp.com')
+
         homeRequest.then(response => { 
+        console.log(response) 
+        console.log(response.headers) 
         console.log('__ recieved response') 
         const data = JSON.stringify(response)
         $('.root').append(data) 
-        console.log(data)
-        
+        // console.log(data)
+        makeHeadRequest();
     })
 
     })
+
+    async function makeHeadRequest() { 
+        let headResponse = await axios.head('http://intro-ajax-api.herokuapp.com'); 
+        console.log(`Status: ${headResponse.status}`)
+    }
+
     ping.click(() => { 
 
         pingRequest.then(res => { 
