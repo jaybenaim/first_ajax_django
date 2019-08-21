@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         homeRequest.then(response => { 
         console.log('__ recieved response') 
         const data = JSON.stringify(response)
-        $('.root').append(response) 
+        $('.root').append(data) 
         console.log(data)
         
     })
